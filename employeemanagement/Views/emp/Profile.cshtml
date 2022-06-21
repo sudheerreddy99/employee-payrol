@@ -1,0 +1,46 @@
+﻿
+
+@model List<empclass.Register>
+<style>
+    .container{
+        text-decoration-color:inherit;
+        -moz-text-size-adjust:auto;    }
+</style>
+@foreach(var item in Model)
+{
+    <div class="card">
+    
+    <b style="margin-left:30px" >EmployeeID: @item.Employeeid<br /></b>
+    <div class="container">
+  <b>First Name: </b>   @item.Firstname<br><br><br>
+  
+   <b>Last Name:</b>   @item.Lastname<br><br><br>
+   <b>E-Mail:</b>   @item.Email<br><br><br>
+    <b>Date-Of-Birth: </b> @item.Dob<br><br><br>
+   <b> Role:  </b>@item.Designation<br><br><br>
+   <b>Address:</b>   @item.Address1<br><br><br>
+   
+   
+
+
+    <a asp-action="DetailsUpdate"  asp-route-myempid1=@item.Employeeid    
+            asp-route-myempfname=@item.Firstname asp-route-myemplname=@item.Lastname asp-route-myempmail=@item.Email 
+            asp-route-myempdesig=@item.Designation class="btn btn-info">Update</a><br><br>
+            <br>
+           
+   
+
+           
+                <a class="nav-link" asp-controller="Emp"  asp-action="Login" ><i class="fa fa-sign-out" style="font-size:48px;color:red"></i></a>
+              
+    
+    
+    </div>
+    </div>
+    <br />
+}
+
+
+
+
+

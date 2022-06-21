@@ -1,0 +1,57 @@
+﻿<html>
+    <head>
+        <title>
+            EmployeePayRoll....
+        </title>
+         <link rel="stylesheet" href="~/css/emp.css"/>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+        </head>
+          <body>
+        <header>
+        <div class="img">
+           <img class="full"  src="~/Images/paylogo.jpg"/>
+        </div>
+
+        <div>
+            <ul class="nav nav-tabs">
+               
+
+              <li class="nav-item">
+                <a class="nav-link "  asp-action="Home">Home</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" asp-action="Employees">Employees</a>
+              </li>
+             
+             
+
+             
+              <li class="nav-item">
+                <a class="nav-link" asp-action="Leave">Leaves</a>
+              </li>
+
+
+              
+             
+               
+   
+
+               <li class="nav-item">
+                <a class="nav-link" asp-controller="Emp"  asp-action="Logout" >Logout</a>
+              </li>
+
+
+
+            
+            </ul>
+ 
+        </div>
+        </header>
+       
+            @RenderBody()
+
+
+      
+    </body>
+</html>

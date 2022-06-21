@@ -1,0 +1,94 @@
+﻿
+@model empclass.Register
+
+<form method="post">         
+  <div  style="width:500px; margin-left:300px" >
+      
+    <h1>Edit Employee</h1>
+    
+    <hr>
+     <label><b>Empid</b></label> 
+    <input type="text" asp-for="Employeeid"   class="form-control">
+    
+    
+    
+    <label ><b>First Name</b></label> 
+    <input type="text" asp-for="Firstname"  class="form-control">
+    
+    <label><b>Last Name</b></label>
+    <input type="text" asp-for="Lastname"  class="form-control">
+    
+    <label><b>E-mail</b></label>
+    <input type="text" asp-for="Email"  class="form-control">
+    <label><b>Password</b></label>
+    <input type="text" asp-for="Passwords"  class="form-control">
+
+    
+      <tr>
+  <td > <label class="register"><b>Select Gender</b> </label></td> <br />
+  <td><input type="radio" asp-for=Gender  value ="Male"/>Male
+ <input type="radio" asp-for=Gender  value="Female" />Female</td> 
+ <td><span asp-validation-for="Gender"  class="text-danger"></span></td>
+ 
+ 
+
+
+  </tr><br />
+
+    
+
+
+    
+  <label class="register"><b>Enter DOB</b></label>
+
+  <input type="date" max="2000-01-01" min="1973-01-01"  asp-for=Dob  class="form-control" />
+ <span asp-validation-for="Dob" class="text-danger"></span><br />
+   
+ 
+       <label><b>Role</b></label>
+
+   <select asp-for=Designation >
+        
+        
+         <option value="Developer" >Developer</option>
+        
+        <option value="Tester">Tester</option>
+        
+   
+    <option value="Designer">Designer</option>
+   
+ </select>
+
+   
+     
+ 
+
+
+  <br />
+
+    
+     <label><b>Phone No</b></label>
+    <input type="text" asp-for="Mobile" required class="form-control"><br><br>
+
+    
+     <label><b>Address</b></label>
+    <input type="comment" asp-for="Address1"  class="form-control"><br><br>
+    
+ 
+  
+
+   
+   
+   
+   
+   
+
+  
+    <button type="submit"   class="btn btn-success" style="text-align:center">Save Changes</button><label class="text-danger"> @ViewData["Check"]</label>
+    <a asp-action="Profile" class="btn btn-primary">Back To Profile</a>
+    
+    <label class="text-success">@ViewData["a"]</label>
+    </div>
+    </form>
+
+
