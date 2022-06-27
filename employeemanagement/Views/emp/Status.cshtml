@@ -1,0 +1,23 @@
+﻿
+
+
+@model List<empclass.Leave>
+ <div class="row">
+
+
+    @foreach(var item in Model)
+    {
+        
+        <div class="col-md-3">
+            <div class="card">
+
+
+              <div> <h1>From</h1> <h2>@item.Fromdate</h2><br /></div><br />
+         <div><h1>To</h1><h2>@item.Todate</h2> <br /></div><br />
+          <div> <h1>Reason</h1> @item.Reason<br /></div><br />
+           <div> <h1>Status</h1><b style="color:blue">@item.Status</b> <br /></div><br />
+           </div>
+    </div>
+    }
+    </div>
+    

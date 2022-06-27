@@ -1,0 +1,36 @@
+﻿
+
+
+
+@{
+    Layout = "_Layout2";
+}
+@model empclass.Register
+
+
+
+@if (Model != null)
+{
+    <div class="row">
+        <div class="col-md-4">   
+            <div class="card">
+
+                <div class="container">
+                    <div>@Model.Firstname</div>
+                    <div>@Model.Lastname</div>
+                    <div>@Model.Email</div>
+                    <div>@Model.Designation</div>
+                    <div>@Model.Mobile</div>
+                    <div>@Model.Dob</div>
+                    <div>@Model.Gender</div>
+                </div>         
+            </div>
+        </div>
+    </div>
+}
+    <form method="post">
+        
+        <input type="submit" value="confirm delete" class="btn btn-info" />
+    </form>
+    @ViewData["n"] 
+    <a type="button" class="btn btn-success" asp-action = "Employees">Back To Employees </a>

@@ -4,3 +4,39 @@
 @{
     Layout = "_Layout2";
 }
+
+@model List<empclass.Leave>
+
+  
+    <div class="row">
+
+
+    @foreach(var item in Model)
+    {
+        <div class="col-md-3">
+            <div class="card">
+           
+            <div style="text-align:center">
+                
+              <div> <h1>Employee Id</h1><h2>@item.Employeeid</h2><br /></div>
+        
+              <div> <h1>From</h1> <h2>@item.Fromdate</h2>
+         <h1>To</h1><h2>@item.Todate</h2> <br /></div>
+          <div> <h1>Reason</h1> @item.Reason<br /></div>
+
+
+
+       <form method="post">
+    <button type="submit" asp-route-employeeid=@item.Employeeid asp-route-leaveid=@item.Leaveid asp-route-button="Approved" value="Approved" name="Button" class="btn btn-success">Approve</button>
+    <button type="submit" asp-route-employeeid=@item.Employeeid asp-route-leaveid=@item.Leaveid asp-route-button="Declined" style="margin-left:50px" value="Declined" name="Button" class="btn btn-danger">Decline</button><br>
+ </form> 
+    <label class="text-success">@ViewData["a"]</label>
+        
+         </div>
+      
+        
+         </div> 
+
+       </div>  
+    }
+    </div>

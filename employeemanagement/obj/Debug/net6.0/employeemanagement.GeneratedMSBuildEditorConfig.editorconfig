@@ -19,6 +19,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkRW1wbG95ZWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/dotnet/employeemanagement/employeemanagement/Views/Admin/Attendence.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXR0ZW5kZW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/dotnet/employeemanagement/employeemanagement/Views/Admin/DeleteEmp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlRW1wLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/dotnet/employeemanagement/employeemanagement/Views/Admin/Employees.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRW1wbG95ZWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -33,6 +41,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/dotnet/employeemanagement/employeemanagement/Views/Admin/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/dotnet/employeemanagement/employeemanagement/Views/Admin/UpdateEmp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlRW1wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/dotnet/employeemanagement/employeemanagement/Views/emp/DetailsUpdate.cshtml]
@@ -61,6 +73,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/dotnet/employeemanagement/employeemanagement/Views/emp/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZW1wXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/dotnet/employeemanagement/employeemanagement/Views/emp/Status.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZW1wXFN0YXR1cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/dotnet/employeemanagement/employeemanagement/Views/Home/Index.cshtml]

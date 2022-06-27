@@ -81,5 +81,58 @@
             return result;
 
         }
+        public int attendancecheck(int id)
+        {
+            var result = (from t in Emp.Attendecees
+                          where t.Employeeid == id & t.Pdate == DateTime.Today
+                          select t).Count();
+            return result;
+        }
+        public int Empattend(Attendecee a)
+        {
+
+            Emp.Attendecees.Add(a);
+            int res = Emp.SaveChanges();
+            return res;
+
+        }
+        public List<Leave> Leavecheck(int id)
+        {
+            var res = (from t in Emp.Leaves
+                       where t.Employeeid == id
+                       select t).ToList();
+            return res;
+
+        }
+        public List<Leave> DisplayLeave()
+        {
+            var result = (from t in Emp.Leaves where t.Status == null select t).ToList();
+            return result;
+
+        }
+        public int Leavebutton(int employeeid, int leaveid, String Button)
+        {
+            var result = (from t in Emp.Leaves
+                          where t.Leaveid == leaveid && t.Employeeid == employeeid
+                          select t).FirstOrDefault();
+            result.Status = Button;
+
+            int res = Emp.SaveChanges();
+
+            return res;
+        }
+        public attend displayattend()
+        {
+            attend ob = new attend();
+            ob.register = Emp.Registers.ToList();
+            ob.attendecee = Emp.Attendecees.ToList();
+            return ob;
+        }
+        public class attend
+        {
+            public List<Register> register { get; set; }
+            public List<Attendecee> attendecee { get; set; }
+
+        }
     }
 }

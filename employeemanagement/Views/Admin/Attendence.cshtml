@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = "_Layout2";
+}
+
+
+
+
+<div class="row" style="margin-left:8%;margin-right:2%">
+    
+@foreach(var item in Model)
+{
+    
+<div class="col-sm-4" >
+    <div class="card">
+        <br>
+     <b style="margin-left:100px" >  Name: @item.register.Firstname</b><br />
+   <div class="container" style="margin-left:50px">
+    <div>Email @item.register.Email<br>
+    Date: @item.attendecee.Pdate<br>
+    Status: @item.attendecee.Astatus </div>
+    <br>
+   
+   
+  
+</div> 
+</div> 
+    </div>
+    <br />
+}
+<br />
+</div>

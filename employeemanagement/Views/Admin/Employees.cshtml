@@ -99,11 +99,16 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Pincode)
             </td>
+            
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-               
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
+            <a asp-action="UpdateEmp"  asp-route-myempid=@item.Employeeid    
+            asp-route-myempfname=@item.Firstname asp-route-myemplname=@item.Lastname asp-route-myempmail=@item.Email 
+            asp-route-myempdesig=@item.Designation class="btn btn-info">Edit</a>
+        </td>
+              <td>
+               <a asp-action="DeleteEmp"  asp-route-myempid=@item.Employeeid     asp-route-myempfname=@item.Firstname asp-route-myemplname=@item.Lastname asp-route-myempmail=@item.Email 
+               asp-route-myempdesig=@item.Designation class="btn btn-Danger">Delete</a>
+               </td>
         </tr>
 }
     </tbody>

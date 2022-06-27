@@ -10,6 +10,7 @@ namespace employeemanagement.Controllers
         public IActionResult Home()
         {
             return View();
+
         }
         public ActionResult LeaveApply()
         {
@@ -27,6 +28,7 @@ namespace employeemanagement.Controllers
                 if (HttpContext.Session.GetString("uid") == null)
                 {
                     return RedirectToAction("Login");
+
                 }
                 else
                 {
@@ -127,6 +129,53 @@ namespace employeemanagement.Controllers
         {
 
             return View();
+        }
+        [HttpPost]
+        public ActionResult Markattendance(Attendecee a)
+        {
+
+            string user = HttpContext.Session.GetString("uid");
+            int id = obj.employeeid(user);
+            
+            a.Employeeid = id;
+            a.Mail = user;
+            a.Pdate = DateTime.Today;
+            a.Astatus = "Present";
+            if (ModelState.IsValid)
+            {
+                try
+                {
+
+                    var res = obj.attendancecheck(id);
+                    if (res > 0)
+                    {
+                        ViewData["a"] = "Attendece already applied";
+                        
+                    }
+                    else
+                    {
+                        var result = obj.Empattend(a);
+                        if (result > 0)
+                        {
+                            ViewData["a"] = "Attendece Submitted Successfully";
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    ViewData["a"] = "Attendence Already Marked Today";
+                }
+            }
+            return View();
+        }
+        public ActionResult Status()
+        {
+            string user = HttpContext.Session.GetString("uid");
+            int id = obj.employeeid(user);
+            var result = obj.Leavecheck(id);
+            return View(result);
+
+
         }
         public ActionResult Logout()
         {
