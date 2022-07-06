@@ -121,6 +121,15 @@
 
             return res;
         }
+        public List<Register> displaySearch(string tofind)
+        {
+
+            var res = (from t in Emp.Registers
+                                  where t.Email.Contains(tofind)
+                                  select t).ToList();
+            return res;
+        }
+        
         public attend displayattend()
         {
             attend ob = new attend();

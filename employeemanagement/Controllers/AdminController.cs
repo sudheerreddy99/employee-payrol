@@ -125,6 +125,27 @@ namespace employeemanagement.Controllers
             return View(result);
 
         }
+        public ActionResult Search(string tofind)
+        {
+
+           
+                try
+                {
+                    if ( tofind != null)
+                    {
+                        List<Register> res = obj.displaySearch(tofind);
+                        return View(res);
+                    }
+
+                }
+                catch (Exception error)
+                {
+                    ViewData["a"] = "error occured please try later";
+                }
+           
+            return View();
+        }
+       
         public ActionResult Logout()
         {
             HttpContext.Session.Remove("uid");
