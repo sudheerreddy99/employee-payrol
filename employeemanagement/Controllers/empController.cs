@@ -23,8 +23,6 @@ namespace employeemanagement.Controllers
             try
             {
 
-
-
                 if (HttpContext.Session.GetString("uid") == null)
                 {
                     return RedirectToAction("Login");
@@ -67,21 +65,17 @@ namespace employeemanagement.Controllers
         public ActionResult Login(int rad, string uname, string pwd)
         {
 
+            try
+            {
 
-
-
-            var res = obj.Login(rad, uname, pwd);
+                var res = obj.Login(rad, uname, pwd);
             if (res > 0 && rad == 0)
             {
                 HttpContext.Session.SetString("uid", uname);
 
                 return RedirectToAction("Home");
 
-                
             }
-
-
-
 
             else if (res > 0 && rad == 1)
             {
@@ -91,6 +85,12 @@ namespace employeemanagement.Controllers
             else
             {
                 ViewData["a"] = "Invalid username or password";
+                return View();
+            }
+            }
+            catch (Exception error)
+            {
+                ViewData["a"] = " error occured Try again later";
                 return View();
             }
 
@@ -114,14 +114,24 @@ namespace employeemanagement.Controllers
         [HttpPost]
         public ActionResult DetailsUpdate(Register r)
         {
-            Empobj.Registers.Update(r);
-            int i = Empobj.SaveChanges();
-
-            if (i > 0)
+            if (ModelState.IsValid)
             {
-                ViewData["a"] = "Update Successfully";
-            }
+                try
+                {
 
+                    Empobj.Registers.Update(r);
+                    int i = Empobj.SaveChanges();
+
+                    if (i > 0)
+                    {
+                        ViewData["a"] = "Update Successfully";
+                    }
+                }
+                catch (Exception error)
+                {
+                    ViewData["a"] = "Error Occured please try again Later";
+                }
+            }
             return View();
         }
 

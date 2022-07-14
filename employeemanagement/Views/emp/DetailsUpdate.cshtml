@@ -8,23 +8,26 @@
     
     <hr>
      <label><b>Empid</b></label> 
-    <input type="text" asp-for="Employeeid" required  class="form-control">
+    <input type="text" asp-for="Employeeid"   class="form-control" readonly>
     
     
     
     <label ><b>First Name</b></label> 
-    <input type="text" asp-for="Firstname" required class="form-control">
+    <input type="text" asp-for="Firstname"  class="form-control">
     <span asp-validation-for="Firstname"  class="text-danger"></span>
-
+     <br />
     <label><b>Last Name</b></label>
-    <input type="text" asp-for="Lastname" required class="form-control">
+    <input type="text" asp-for="Lastname"  class="form-control">
      <span asp-validation-for="Lastname"  class="text-danger"></span>
-
+      <br />
     <label><b>E-mail</b></label>
-    <input type="email" asp-for="Email" required class="form-control">
+    <input type="email" asp-for="Email"  class="form-control">
+     <span asp-validation-for="Email"  class="text-danger"></span>
+    <br />
     <label><b>Password</b></label>
-    <input type="text" asp-for="Passwords" required class="form-control">
-
+    <input type="password" asp-for="Passwords"  class="form-control">
+    <span asp-validation-for="Passwords"  class="text-danger"></span>
+    <br />
     
       <tr>
   <td > <label class="register"><b>Select Gender</b> </label></td> <br />
@@ -43,7 +46,7 @@
     
   <label class="register"><b>Enter DOB</b></label>
 
-  <input type="date" max="2000-01-01" min="1973-01-01"  asp-for=Dob  class="form-control" required />
+  <input type="date" max="2000-01-01" min="1973-01-01"  asp-for=Dob  class="form-control"  />
  <span asp-validation-for="Dob" class="text-danger"></span><br />
    
  
@@ -52,11 +55,8 @@
    <select asp-for=Designation required>
         
         
-         <option value="Developer" >Developer</option>
-        
+         <option value="Developer" >Developer</option>   
         <option value="Tester">Tester</option>
-        
-   
     <option value="Designer">Designer</option>
    
  </select>
@@ -70,11 +70,12 @@
 
     
      <label><b>Phone No</b></label>
-    <input type="text" asp-for="Mobile" required class="form-control"><br><br>
-
+    <input type="text" asp-for="Mobile"  class="form-control">
+     <span asp-validation-for="Mobile"  class="text-danger"></span>
+   <br />
     
      <label><b>Address</b></label>
-    <input type="comment" asp-for="Address1" required class="form-control"><br><br>
+    <input type="comment" asp-for="Address1"  class="form-control"><br><br>
     
  
   

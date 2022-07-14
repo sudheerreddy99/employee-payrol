@@ -267,3 +267,5 @@ E:\dotnet\employeemanagement\employeemanagement\bin\Debug\net6.0\runtimes\win\li
 E:\dotnet\employeemanagement\employeemanagement\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\dotnet\employeemanagement\employeemanagement\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\dotnet\employeemanagement\employeemanagement\obj\Debug\net6.0\employeemanagement.MvcApplicationPartsAssemblyInfo.cs
+E:\dotnet\employeemanagement\employeemanagement\bin\Debug\net6.0\xunit.abstractions.dll
+E:\dotnet\employeemanagement\employeemanagement\bin\Debug\net6.0\xunit.core.dll

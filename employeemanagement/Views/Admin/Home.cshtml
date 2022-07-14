@@ -2,3 +2,41 @@
 @{
     Layout = "_Layout2";
 }
+
+<style>
+
+.dash{
+    width:300px;
+    border:15px solid green;
+    padding:50px;
+    margin:20px;
+}
+
+
+
+</style>
+
+
+
+
+
+
+<h1 class="text-center" ><b>Welcome To PayRoll Management</b></h1><br /><br />
+<div class="text-center">
+     <ul class="nav nav-tabs" >
+               
+
+              <li class="dash"><b>Total Employees:</b><br /><b style="color:darkorange">@ViewData["Empcount"]</b> 
+              
+              </li>
+
+ 
+              
+
+              <li class="dash"><b>Total Leaves:</b><br /><b style="color:darkorange">@ViewData["Tleavecount"]</b> 
+              
+              </li>
+
+
+</ul>
+</div>

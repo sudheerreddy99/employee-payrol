@@ -10,13 +10,23 @@
         
         <div class="col-md-3">
             <div class="card">
-
+                <div class="container">
 
               <div> <h1>From</h1> <h2>@item.Fromdate</h2><br /></div><br />
          <div><h1>To</h1><h2>@item.Todate</h2> <br /></div><br />
           <div> <h1>Reason</h1> @item.Reason<br /></div><br />
+          @if (@item.Status == null)
+          {
+           <div> <h1>Status</h1><b style="color:blue">Waiting For Approval</b> <br /></div><br />
+             
+          }
+          else{
+
            <div> <h1>Status</h1><b style="color:blue">@item.Status</b> <br /></div><br />
-           </div>
+          
+           }
+    </div>
+     </div>
     </div>
     }
     </div>

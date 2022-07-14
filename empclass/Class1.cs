@@ -130,18 +130,6 @@
             return res;
         }
         
-        public attend displayattend()
-        {
-            attend ob = new attend();
-            ob.register = Emp.Registers.ToList();
-            ob.attendecee = Emp.Attendecees.ToList();
-            return ob;
-        }
-        public class attend
-        {
-            public List<Register> register { get; set; }
-            public List<Attendecee> attendecee { get; set; }
-
-        }
+       
     }
 }

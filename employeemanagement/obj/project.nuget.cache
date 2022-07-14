@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3ON9MzqO07ADqR19Hf5nwgVjluANWiwHJvQAgjsSqghY9sqDRYlpnXkV46iTypxjq74lLXnMi6qfPbz9l8mCVQ==",
+  "dgSpecHash": "9JbnpX67Ti3gqEdtUEdAPSetk4kSVxG51EvtIwjU2z8gq2+PndsRrD6MaVPhhcSzOmC+8rDTwV3stD3mPWQX2Q==",
   "success": true,
   "projectFilePath": "E:\\dotnet\\employeemanagement\\employeemanagement\\employeemanagement.csproj",
   "expectedPackageFiles": [
@@ -178,7 +178,9 @@
     "C:\\Users\\dell\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\dell\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\dell\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\dell\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\dell\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

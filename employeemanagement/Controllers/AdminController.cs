@@ -11,11 +11,22 @@ namespace employeemanagement.Controllers
         Class1 obj = new Class1();
         public ActionResult Home()
         {
+            //Employees count
+            var count = (from t in Empobj.Registers
+                         select t.Employeeid).Count();
+            ViewData["Empcount"] = count;
+
+            //Leaves count
+
+            var ccount = (from t in Empobj.Leaves
+                          select t.Leaveid ).Count();
+            ViewData["TLeavecount"] = ccount;
+
             return View();
         }
         public ActionResult Employees()
         {
-            var result = obj.DisplayEmp();
+            var result = Empobj.Registers.ToList();
             return View(result);
         }
         [HttpGet]
@@ -27,7 +38,8 @@ namespace employeemanagement.Controllers
         [HttpPost]
         public ActionResult AddEmployee(Register r)
         {
-
+            if (ModelState.IsValid)
+            {
                 try
                 {
 
@@ -41,8 +53,8 @@ namespace employeemanagement.Controllers
                 {
                     ViewData["a"] = "Employee Already Exists";
                 }
-         
-            return View();
+            }
+            return View(); 
         }
         [HttpGet]
         public ActionResult UpdateEmp(int myempid)
@@ -55,14 +67,23 @@ namespace employeemanagement.Controllers
         [HttpPost]
         public ActionResult UpdateEmp(Register r)
         {
-            Empobj.Registers.Update(r);
-            int i = Empobj.SaveChanges();
-
-            if (i > 0)
+            if (ModelState.IsValid)
             {
-                ViewData["a"] = "Update Successfully";
-            }
+                try
+                {
+                    Empobj.Registers.Update(r);
+                    int i = Empobj.SaveChanges();
 
+                    if (i > 0)
+                    {
+                        ViewData["a"] = "Update Successfully";
+                    }
+                }
+                catch (Exception error)
+                {
+                    ViewData["a"] = "error occured please try later";
+                }
+            }
             return View();
         }
         [HttpGet]
@@ -113,12 +134,9 @@ namespace employeemanagement.Controllers
         }
         public ActionResult Attendence()
         {
-            var res = obj.displayattend();
-
-
-
-            var result = from t in res.register
-                         from t1 in res.attendecee
+            
+            var result = from t in Empobj.Registers
+                         from t1 in Empobj.Attendecees
                          where t.Employeeid == t1.Employeeid
 
                          select new { register = t, attendecee = t1 };
