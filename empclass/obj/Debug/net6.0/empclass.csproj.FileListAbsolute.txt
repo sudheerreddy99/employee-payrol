@@ -1,6 +1,5 @@
 E:\dotnet\employeemanagement\empclass\bin\Debug\net6.0\empclass.deps.json
 E:\dotnet\employeemanagement\empclass\bin\Debug\net6.0\empclass.dll
-E:\dotnet\employeemanagement\empclass\bin\Debug\net6.0\ref\empclass.dll
 E:\dotnet\employeemanagement\empclass\bin\Debug\net6.0\empclass.pdb
 E:\dotnet\employeemanagement\empclass\obj\Debug\net6.0\empclass.csproj.AssemblyReference.cache
 E:\dotnet\employeemanagement\empclass\obj\Debug\net6.0\empclass.GeneratedMSBuildEditorConfig.editorconfig
@@ -10,3 +9,6 @@ E:\dotnet\employeemanagement\empclass\obj\Debug\net6.0\empclass.csproj.CoreCompi
 E:\dotnet\employeemanagement\empclass\obj\Debug\net6.0\empclass.dll
 E:\dotnet\employeemanagement\empclass\obj\Debug\net6.0\ref\empclass.dll
 E:\dotnet\employeemanagement\empclass\obj\Debug\net6.0\empclass.pdb
+E:\dotnet\employeemanagement\empclass\obj\Debug\net6.0\refint\empclass.dll
+E:\dotnet\employeemanagement\empclass\bin\Debug\net6.0\empclass.runtimeconfig.json
+E:\dotnet\employeemanagement\empclass\obj\Debug\net6.0\empclass.genruntimeconfig.cache

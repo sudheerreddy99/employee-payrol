@@ -8,6 +8,7 @@
    "ModelNamespace": null,
    "OutputContextPath": null,
    "OutputPath": null,
+   "PreserveCasingWithRegex": true,
    "ProjectRootNamespace": "empclass",
    "Schemas": null,
    "SelectedHandlebarsLanguage": 0,
@@ -47,5 +48,6 @@
    "UseNodaTime": false,
    "UseNullableReferences": false,
    "UseSchemaFolders": false,
-   "UseSpatial": false
+   "UseSpatial": false,
+   "UseT4": false
 }

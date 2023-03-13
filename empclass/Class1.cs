@@ -4,7 +4,6 @@
     {
         employeeContext Emp = new employeeContext();
 
-
         public int Login(int rad, string uname, string pwd)
         {
             if (rad == 0)
